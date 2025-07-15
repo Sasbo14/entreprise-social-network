@@ -1,4 +1,4 @@
-package com.entreprise.socialnetwork.security;
+package com.entreprise.socialnetwork.service;
 
 import com.entreprise.socialnetwork.model.User;
 import com.entreprise.socialnetwork.repository.UserRepository;

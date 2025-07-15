@@ -22,9 +22,4 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    @PostMapping
-    public String createUser(@RequestBody User user) {
-        userRepository.save(user);
-        return "Utilisateur ajouté avec succès";
-    }
 }
