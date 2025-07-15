@@ -1,6 +1,7 @@
 package com.entreprise.socialnetwork.security.config;
 
-import com.entreprise.socialnetwork.security.CustomUserDetailsService;
+import com.entreprise.socialnetwork.service.CustomUserDetailsService;
+import com.entreprise.socialnetwork.security.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,11 +11,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.security.Security;
-
+@Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 @Autowired
